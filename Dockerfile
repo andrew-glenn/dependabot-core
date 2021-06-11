@@ -63,8 +63,7 @@ RUN GROUP_NAME=$(getent group $USER_GID | awk -F':' '{print $1}') \
 
 ### RUBY
 
-# Install Ruby 
-.6, update RubyGems, and install Bundler
+# Install Ruby 2.7, update RubyGems, and install Bundler
 ENV BUNDLE_SILENCE_ROOT_WARNING=1
 RUN apt-add-repository ppa:brightbox/ruby-ng \
   && apt-get update \
